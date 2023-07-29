@@ -18,7 +18,6 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--link-third-color);
-  
 }
 div.container {
   width: 1600px;
@@ -31,6 +30,9 @@ h3 {
   font-weight: 700;
   line-height: 36px;
   letter-spacing: 1.08px;
+  text-align: left;
+  padding-left: 24px;
+  padding-top: 20px;
 }
 p {
   color: var(--link-another-color);
@@ -38,10 +40,26 @@ p {
   font-family: var(--link-font-family);
   line-height: 30px;
   letter-spacing: 0.48px;
+  text-align: left;
+  padding-left: 24px;
 }
 header a.navigation-menu:hover,
 header .header-contact:hover {
   color: var(--link-active-color);
+}
+header .navigation-menu:hover::after,
+header .header-contact:hover::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: blue; /* Culoarea barei */
+  transition: width 0.3s;
+}
+header .navigation-menu:hover::after,
+header .header-contact:hover::after {
+  width: 100%;
 }
 .global-header {
   padding: 0px 215px;
@@ -123,28 +141,31 @@ header svg.icon-smartphone {
   flex-shrink: 0;
   margin-right: 10px;
 }
-
 .main-section {
-  flex-shrink: 0;
-  
-  text-align: center;
-  color: var(--link-third-color);
-  font-size: 1em;
-  font-family: var(--link-font-family);
-  font-weight: 500;
-  line-height: 1.625em;
-  letter-spacing: 0.03em;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 94px;
 }
-
-.main-section button.button {
-
+.button {
+  color: var(--link-third-color);
+  text-align: center;
+  font-family: var(--link-font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: 0.48px;
+}
+.button {
+  width: 120px;
+  height: 38px;
   flex-shrink: 0;
   background: #f5f4fa;
-  text-decoration: none;
-  
+  border: none;
+  border-radius: 4px;
 }
-
-.main-section .button {
+.main-section a.button {
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
@@ -152,29 +173,38 @@ header svg.icon-smartphone {
   text-align: center;
   color: var(--link-third-color);
   cursor: pointer;
+  transition: var(--transition);
+  background-color: var(--transition);
+  box-shadow: var(--transition);
 }
 
 .button:focus,
 .button:hover {
-  border-radius: 4px;
-  color: #fff;
-  background-color: #2196f3;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+  color: var(--link-color);
+  background-color: var(--link-active-color);
 }
 .second-section {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  text-align: center;
+  padding-top: 54px;
+  padding-bottom: 114px;
+  padding-left: 215px;
 }
-.second-section ul {
-  margin: 50px 0px 0px;
-  padding: 0px;
+.product img {
+  width: 370px;
+  height: 294px;
 }
 .product {
-  flex-direction: column;
-  position: static;
-  float: left;
-  padding: 2.5em;
+  width: 370px;
+  height: 404px;
+  border: 1px solid #eee;
+  background: #fff;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
+
 .footer {
   background-color: #2f303a;
   color: #fff;
@@ -196,14 +226,14 @@ address.contact-class {
   padding-top: 60px;
 }
 div.contact-class {
-padding-top: 85px;
-padding-right: 900px;
+  padding-top: 85px;
+  padding-right: 900px;
 }
 .social-media {
   padding-bottom: 12px;
 }
 .social-media-footer {
-float: left;
+  float: left;
 }
 footer a.logo-white {
   display: flex;
@@ -228,7 +258,7 @@ footer span.logo-label {
   text-decoration: none;
 }
 
- .address-class {
+.address-class {
   color: var(--link-color);
   font-size: 16px;
   font-family: var(--link-font-family);
