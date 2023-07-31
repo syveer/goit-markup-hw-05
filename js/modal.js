@@ -1,14 +1,14 @@
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".open-button");
-const closeModalBtn = document.querySelector(".close-button");
-const openModal = function () {
-  modal.classList.remove("is-hidden");
-  overlay.classList.remove("is-hidden");
-};
-openModalBtn.addEventListener("click", data-modalopen );
-const closeModal = function () {
-  modal.classList.add("is-hidden");
-  overlay.classList.add("is-hidden");
-};
-closeModalBtn.addEventListener("click", closeModal);
+(() => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-modal-open]"),
+    closeModalBtn: document.querySelector("[data-modal-close]"),
+    modal: document.querySelector("[data-modal]"),
+  };
+
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle("is-hidden");
+  }
+})();
