@@ -536,7 +536,7 @@ footer .mail:hover,
 .modal {
   width: 528px;
   height: 581px;
-  position: absolute;
+  position: fixed;
   margin: auto;
   top: 50%;
   left: 50%;
@@ -546,13 +546,7 @@ footer .mail:hover,
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   z-index: 2;
   padding: 10px;
-  transition: var(--transition);
-              visibility: var(--transition);
-              opacity: var(--transition);
-}
-
-.close-button {
-  text-align: right;
+  transition: transform var(--transition);
 }
 
 .modal p {
@@ -561,6 +555,7 @@ footer .mail:hover,
 }
 
 .close-button {
+
   background: #eee;
   padding: 0 7px 0 7px;
   border: 1px solid #757575;
@@ -577,9 +572,7 @@ footer .mail:hover,
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   z-index: 1;
-  transition: var(--transition);
-              visibility: var(--transition);
-              opacity: var(--transition);
+  transition: trasnform var(--transition);
 }
 
 .hidden {
