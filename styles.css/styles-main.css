@@ -560,6 +560,7 @@ footer .mail:hover,
   padding: 0 7px 0 7px;
   border: 1px solid #757575;
   border-radius: 50%;
+  cursor: pointer;
 }
 .overlay {
   position: fixed;
