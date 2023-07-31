@@ -43,23 +43,10 @@ p {
   text-align: left;
   padding-left: 24px;
 }
-header a.navigation-menu:hover,
-header .header-contact:hover {
+
+.global-header a.navigation-menu:hover,
+.global-header a.header-contact:hover {
   color: var(--link-active-color);
-}
-header .navigation-menu:hover::after,
-header .header-contact:hover::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: blue; /* Culoarea barei */
-  transition: width 0.3s;
-}
-header .navigation-menu:hover::after,
-header .header-contact:hover::after {
-  width: 100%;
 }
 .global-header {
   padding: 0px 215px;
@@ -145,7 +132,6 @@ header svg.icon-smartphone {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding-top: 94px;
 }
 .button {
   color: var(--link-third-color);

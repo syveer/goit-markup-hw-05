@@ -115,7 +115,7 @@ header svg.icon-smartphone {
   height: 16px;
   flex-shrink: 0;
 }
-button {
+.button-open {
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -125,8 +125,8 @@ button {
   transition: background-color var(--transition), color var(--transition);
 }
 
-button:hover,
-button:focus {
+.button-open:hover,
+.button-open:focus {
   border-radius: 4px;
   color: #fff;
   background-color: #2196f3;
@@ -183,7 +183,6 @@ button:focus {
 }
 .main-section h3 {
   display: flex;
-  justify-content: center;
   text-align: left;
   color: var(--link-third-color);
   font-size: 14px;
@@ -192,11 +191,11 @@ button:focus {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   width: 270px;
+  padding-top: 30px;
 }
 
 .main-section p {
   display: flex;
-  justify-content: center;
   text-align: left;
   color: var(--link-another-color);
   font-size: 14px;
@@ -205,13 +204,16 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.42px;
   gap: 30px;
-  margin: 30px;
   width: 270px;
   height: 75px;
   flex-shrink: 0;
+  padding-top: 10px;
 }
 
 /* Second Section Styles */
+.second-section {
+  padding-bottom: 94px;
+}
 .title {
   color: var(--link-third-color);
   font-size: 2.25em;
@@ -233,8 +235,33 @@ button:focus {
 .images {
   display: block;
 }
-
+.wwdparent {
+  position: relative;
+}
+.wwdtxt {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.wwdchild {
+  width: 100%;
+  height: 70px;
+  background: rgba(57, 57, 57, 0.8);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Third Section Styles */
+.third-section {
+  background: #f5f4fa;
+  width: 1600px;
+  height: 708px;
+  flex-shrink: 0;
+}
 .team {
   display: flex;
   justify-content: center;
@@ -281,7 +308,7 @@ button:focus {
   font-family: var(--link-font-family);
   font-weight: 700;
   letter-spacing: 0.0675em;
-  padding-top: 188px;
+  padding-top: 94px;
   padding-bottom: 50px;
 }
 
@@ -351,14 +378,14 @@ address.contact-class {
   padding-top: 60px;
 }
 div.contact-class {
-padding-top: 85px;
-padding-right: 900px;
+  padding-top: 85px;
+  padding-right: 900px;
 }
 .social-media {
   padding-bottom: 12px;
 }
 .social-media-footer {
-float: left;
+  float: left;
 }
 footer a.logo-white {
   display: flex;
@@ -383,7 +410,7 @@ footer span.logo-label {
   text-decoration: none;
 }
 
- .address-class {
+.address-class {
   color: var(--link-color);
   font-size: 16px;
   font-family: var(--link-font-family);
@@ -443,8 +470,14 @@ div.team-media {
 .team-media:focus {
   fill: var(--link-color);
 }
-svg.column {
-  width: 70px;
+svg.column-class {
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background: #f5f4fa;
+}
+svg.column-class {
+  padding-left: 100px;
 }
 
 .icon-smartphone:hover {
@@ -496,4 +529,60 @@ svg.media:hover {
 footer .mail:hover,
 .phone:hover {
   color: var(--link-active-color);
+}
+
+/* Modal window*/
+
+.modal {
+  width: 528px;
+  height: 581px;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  padding: 10px;
+  transition: var(--transition);
+              visibility: var(--transition);
+              opacity: var(--transition);
+}
+
+.close-button {
+  text-align: right;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.close-button {
+  background: #eee;
+  padding: 0 7px 0 7px;
+  border: 1px solid #757575;
+  border-radius: 50%;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+  transition: var(--transition);
+              visibility: var(--transition);
+              opacity: var(--transition);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
