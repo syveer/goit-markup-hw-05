@@ -102,7 +102,7 @@ header li {
 
 .global-header address {
   display: flex;
-  align-items: center;
+  align-items: end;
 }
 header a.header-contact {
   color: #757575;
@@ -113,7 +113,6 @@ header a.header-contact {
   letter-spacing: 0.28px;
   text-decoration: none;
   margin-left: 20px;
-  align-items: end;
 }
 header svg.icon-envelope {
   width: 20px;
@@ -131,7 +130,8 @@ header svg.icon-smartphone {
 .main-section {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 8px;
+  padding-left: 185px;
 }
 .button {
   color: var(--link-third-color);
@@ -178,6 +178,26 @@ header svg.icon-smartphone {
   padding-bottom: 114px;
   padding-left: 215px;
 }
+.product {
+  position: relative;
+  width: 370px;
+  height: 404px;
+}
+ div.overlay {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #2196f3e6;
+  overflow: hidden;
+  width: 369px;
+  height: 0;
+  transition: var(--transition);
+}
+div.product:hover .overlay {
+  height: 100%;
+}
+
 .product img {
   width: 370px;
   height: 294px;
