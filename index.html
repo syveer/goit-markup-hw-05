@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css/styles-main.css">
-    <link rel="stylesheet" href="SVG/symbol-defs.svg"> <!-- Make sure to include the sprite here -->
+    <link rel="stylesheet" href="SVG/symbol-defs.svg"> 
 </head>
 <body>
     <!--First row-->
@@ -58,21 +58,21 @@
         <div class="container">
             <section class="hero-section">
                 <h1 class="hero-title">EFFECTIVE SOLUTIONS FOR <br> YOUR BUSINESS</h1>
-                <button class="button" type="button">Request our services</button>
+                <button data-modal-open class="button-open" type="button" >Request our services</button>
             </section>
         </div>
         <div class="container">
             <section class="main-section">
                 <div class="column">
-                    <svg class="column">
-                        <use xlink:href="SVG/symbol-defs.svg#icon-antenna"></use>
+                    <svg class="column-class">
+                        <use xlink:href="SVG/symbol-defs.svg#icon-antenna" width="70px"></use>
                     </svg>
                     <h3 class="sub-title">ATTENTION TO DETAILS</h3>
                     <p class="paragraph-class">We go into all the details and processes of your business to develop a customized solution.</p>
                 </div>
                 <div class="column">
-                    <svg class="column">
-                        <use xlink:href="SVG/symbol-defs.svg#icon-clock"></use>
+                    <svg class="column-class">
+                        <use xlink:href="SVG/symbol-defs.svg#icon-clock" width="70px"></use>
                     </svg>
                     <h3 class="sub-title">PUNCTUALITY</h3>
                     <p class="paragraph-class">
@@ -81,15 +81,15 @@
                     </p>
                 </div>
                 <div class="column">
-                    <svg class="column">
-                        <use xlink:href="SVG/symbol-defs.svg#icon-diagram"></use>
+                    <svg class="column-class">
+                        <use xlink:href="SVG/symbol-defs.svg#icon-diagram" width="70px"></use>
                     </svg>
                     <h3 class="sub-title">PLANNING</h3>
                     <p class="paragraph-class">You will be able to observe and participate in every phase of solution development and implementation.</p>
                 </div>
                 <div class="column">
-                    <svg class="column">
-                        <use xlink:href="SVG/symbol-defs.svg#icon-astronaut"></use>
+                    <svg class="column-class">
+                        <use xlink:href="SVG/symbol-defs.svg#icon-astronaut" width="70px"></use>
                     </svg>
                     <h3 class="sub-title">MODERN TECHNOLOGIES</h3>
                     <p class="paragraph-class">We use innovative tools to solve assigned tasks.
@@ -101,23 +101,32 @@
 		<div class="container">
         	<section class="second-section">
                 <h2 class="title">What we do</h2>
-                <ul class="image">
-                    <li>
+                <div class="image">
+                    <div class="wwdparent">
                         <a href="index.html">
                             <img src="images/img (1).jpg" alt="Person writing on keyboard" class="images"  width="370" height="294">
                         </a>
-                    </li>
-                    <li> 
+                        <div class="wwdchild">
+                            <p class="wwdtxt">DESKTOP APPS</p>
+                        </div>
+                    </div>
+                    <div class="wwdparent">
                         <a href="index.html">
                             <img src="images/img1.jpg" alt="Person working on computer" class="images"  width="370" height="294">
                         </a>
-                    </li>
-                    <li>
+                        <div class="wwdchild">
+                            <p class="wwdtxt">MOBILE APPS</p>
+                        </div>
+                    </div>
+                    <div class="wwdparent">
                         <a href="index.html">
                             <img src="images/img2.jpg" alt="Person using tablet" class="images"  width="370" height="294">
                         </a> 
-                    </li>
-                </ul>       
+                        <div class="wwdchild">
+                            <p class="wwdtxt">DESIGN SOLUTIONS</p>
+                        </div>
+                    </div>
+                </div>       
         	</section>
 		</div> 
         <div class="container">
@@ -346,5 +355,16 @@
 			</div>
     	</footer>
 	</div>
+    <!-- modal window -->
+    <div class="modal is-hidden" data-modal>
+        <div class="modal-content">
+            <button class="close-button" data-modal-close="">&times;</button>
+        </div>
+        <div>
+            <p>Modal window text</p>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
