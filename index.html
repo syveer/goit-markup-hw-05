@@ -64,7 +64,7 @@
             EFFECTIVE SOLUTIONS FOR <br />
             YOUR BUSINESS
           </h1>
-          <button class="button-open" type="button" data-modal-open>
+          <button data-modal-open type="button" >
             Request our services
           </button>
         </section>
@@ -465,13 +465,86 @@
     <!-- modal window -->
     <div class="modal is-hidden" data-modal>
       <div class="modal-content">
-        <button class="close-button" data-modal-close>&times;</button>
-      </div>
-      <div>
-        <p>Modal window text</p>
+        <button class="close-button" data-modal-close>
+          <svg class="close-button" width="11px" height="11px">
+            <use href="./SVG/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <h2>Leave your information and we'll call you back</h2>
+        <form class="modal-content">
+          <label class="modal-content" for="name">Name</label>
+          <div>
+            <input
+              class="modal-content"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+            <svg class="form">
+              <use href="./SVG/symbol-defs.svg#icon-individual"></use>
+            </svg>
+          </div>
+          <label class="modal-content" for="telephone">Telephone</label>
+          <div>
+            <input
+              class="modal-content"
+              type="text"
+              id="telephone"
+              name="telephone"
+              required
+            />
+            <svg class="form">
+              <use href="./SVG/symbol-defs.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <label class="modal-content" for="formular-email">E-mail</label>
+          <div>
+            <input
+              class="modal-content"
+              type="email"
+              id="formular-email"
+              name="email"
+              required
+            />
+            <svg class="form">
+              <use href="./SVG/symbol-defs.svg#icon-email"></use>
+            </svg>
+          </div>
+          <label class="comments" for="comments">Comments</label>
+          <div>
+            <textarea
+              class="comments"
+              name="comments"
+              id="comments"
+              cols="50"
+              rows="8"
+              placeholder="Enter the text"
+            ></textarea>
+          </div>
+          <label class="terms-n-conditions">
+            <input
+              class="terms-n-conditions"
+              type="checkbox"
+              id="terms-n-conditions"
+              name="agreement"
+              value="agree"
+              required
+            />
+            <svg class="terms-n-conditions" width="16px" height="15px">
+              <use href="./SVG/symbol-defs.svg#icon-sqare-checkbox"></use>
+            </svg>
+            <span class="terms-n-conditions"
+              >I agree with the letter and accept the
+              <a href="">Terms and Conditions</a></span
+            >
+          </label>
+          <label class="send-button" for="send">
+            <input class="send-button" id="send" type="submit" value="Send" />
+          </label>
+        </form>
       </div>
     </div>
-    <div class="overlay is-hidden"></div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
