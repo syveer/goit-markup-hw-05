@@ -33,8 +33,8 @@ a {
 }
 
 /* Header and Navigation Styles */
-header a.navigation-menu:hover,
-header .header-contact:hover {
+.global-header .studio:hover, .portofolio:hover, .contact-nav:hover,
+.global-header a.header-contact:hover {
   color: var(--link-active-color);
 }
 .global-header {
@@ -76,7 +76,7 @@ header li {
   display: inline-block;
   padding: 0px 25px;
 }
-.global-header a.navigation-menu {
+nav.navbar a {
   color: #212121;
   font-size: 14px;
   font-style: normal;
@@ -114,6 +114,24 @@ header svg.icon-smartphone {
   width: 10px;
   height: 16px;
   flex-shrink: 0;
+}
+.navbar .studio {
+  color: var(--link-active-color)
+}
+.navigation-menu a {
+  position: relative;
+  padding-bottom: 32px;
+}
+.studio::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--link-active-color);
+  bottom: 0;
+  display: flex;
 }
 button {
   width: 200px;
@@ -546,6 +564,9 @@ div.modal {
 div.is-hidden {
   visibility: hidden;
   transition: var(--transition);
+  opacity: var(--transition);
+  pointer-events: painted;
+  transform: scale(1.15);
 }
 div.modal-content {
   width: 528px;
