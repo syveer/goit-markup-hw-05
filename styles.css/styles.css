@@ -43,6 +43,11 @@ p {
   text-align: left;
   padding-left: 24px;
 }
+hr.line {
+  width: 1600px;
+  height: 1px;
+  background: #ececec;
+}
 
 .global-header a.navigation-menu:hover,
 .global-header a.header-contact:hover {
@@ -183,7 +188,7 @@ header svg.icon-smartphone {
   width: 370px;
   height: 404px;
 }
- div.overlay {
+div.overlay {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -325,4 +330,3 @@ svg.media:hover {
 .icon-envelope:hover {
   stroke: var(--link-active-color);
 }
-
